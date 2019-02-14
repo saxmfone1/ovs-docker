@@ -11,6 +11,7 @@ Because of this magic, it needs access to:
 - privileged
 
 The docker run command should end up looking something like:
+
 ```docker run -d --name ovs-docker --cap-add NET_ADMIN --privileged --pid host -v /var/run/docker.sock:/var/run/docker.sock ovs-docker:develop```
 
 Almost all of this has been cobbled together from various open source providing different aspects, but never an all in one package. Probably for good reason.
